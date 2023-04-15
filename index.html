@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atmospheric Air Quality Checker</title>
+	<link rel="stylesheet" href="./style.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="root">
+		<h1 class="heading">Atmospheric Air Quality Checker</h1>
+		<div class="location-container">
+			<h3 class="sub-heading">Please Enter Your Location:</h3>
+			<h4 class="">(For automatic location, kindly permit the system to access the location)</h4>
+			<label for="error-msg" style="color: red;"></label><br />
+			<input
+				type="number"
+				name="lat"
+				placeholder="Enter Latitude Here"
+				id="latitude"
+				step="0.0001"
+				class="loc-input ">
+
+			<input
+				type="number"
+				name="lon"
+				placeholder="Enter Longitude Here"
+				id="longitude"
+				step="0.0001"
+				class="loc-input">
+			<button class="search-btn">Search</button>
+			
+		</div>
+		<hr>
+		<div class="air-info">
+			<h2 class="sub-heading">Air Quality Index at following location is:</h2>
+			<div class="airquality">
+				<span class="air-quality">...</span>
+
+				<span class="arr">&nbsp;&rarr;&nbsp;</span>
+				<span class="air-quality-status">...</span>
+			</div>
+			<div class="component-container">
+				<h2 class="sub-heading">
+					Concentration of Pollutants in Air is as follows:
+				</h2>
+<div class="component-items">
+	<div>
+		<h3 class="component-names">Carbon Monoxide :-</h3>
+		<span class="component-val" data-comp="co"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Nitrogen Monoxide :-</h3>
+		<span class="component-val" data-comp="no"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Nitrogen Dioxide :-</h3>
+		<span class="component-val" data-comp="no2"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Ozone :-</h3>
+		<span class="component-val" data-comp="o3"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Sulphur Dioxide :-</h3>
+		<span class="component-val" data-comp="so2"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Fine Particles Matter :-</h3>
+		<span class="component-val" data-comp="pm2_5"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Coarse Particulate Matter :-</h3>
+		<span class="component-val" data-comp="pm10"></span>
+	</div>
+	<div>
+		<h3 class="component-names">Ammonia :-</h3>
+		<span class="component-val" data-comp="nh3"></span>
+	</div>
+</div>
+				<!--  micrograms per cubic meter of air (μg/m3)  -->
+			</div>
+		</div>
+		<hr>
+		<div class="sub-heading">
+			<h3>Know more about Air Quality Index (AQI)</h3>
+			<h6>1. The air quality index (AQI) is an index for reporting air quality on a daily basis.</h6>
+			<h6>2. It's a measure of how air pollution affects one's health within a short period of time. </h6>
+			<h6>3. There is  increase in pollution due to vehicle traffic, forest fires, or anything that can increase air pollution. Pollutants tested include ozone, nitrogen dioxide, sulphur dioxide, among others.</h6>
+
+		</div>
+
+		<div class="weather-quality">
+			<br>
+
+			<div class="container-good-quality">
+				<h2> GOOD  </h2>
+				<h3> Air quality is considered satisfactory ,and pollulation poses little or no risk</h3>
+				<h4> It is a great day to be active outside </h4>
+			</div>
+
+			<div class="container-moderate-quality">
+				<h2> MODERATE </h2>
+				<h3> Air quality is some what pollutant </h3>
+				<h4> Take care should be taken by sensitive people include :</h4>
+				<h4> People with heart or lung disease,older adults,children and teenagers</h4>
+				<h4> people people with asthma should must take care  </h4>
+				<h4>If you have any symptoms such as palpitation ,shortness of breath or unusual fatigue may indicate a serious problem . </h4>
+				<h4> If any problem contact your health care </h4>
+			</div>
+
+			<div class="container-unhealthy-quality">
+				<h2>UNHEALTHY</h2>
+				<h3> Member of sensitive groups may experience health effects . General public is not likely to be affected .  </h3>
+				<h4> Avoid  prolongned or heavy exertion . Move activities indoors or reschedule to a time whem the air quality is better. </h4>
+			</div>
+
+			<div class="container-very-unhealthy-quality">
+				<h2>VERY-UNHEALTHY</h2>
+				<h3> healt alert: everyone may experience more serious health effects.  </h3>
+				<h4> Avoid all physical activity outdoor </h4>
+				<h4>More activities indoors or reschedule to a time when air quality is better</h4>
+			</div>
+
+			<div class="container-hazardous-quality">
+				<h2> HAZARDOUS</h2>
+				<h3> Health alert . everyone may experince more serious health effect. </h3>
+				<h4> Avoid all physical activity outdoor</h4>
+			    <h4> The person who is affect must take care . remain indoors and keep activity levels low </h4>
+			    <h4> follow tips for keeping particle levels low indoors</h4>
+			</div>
+		</div>
+		
+
+		<hr>
+		<h2 class="sub-heading">Visit following websites for more Information on Air Quality Index (AQI):</h2>
+		<br>
+		<h3><b><a href="https://waqi.info/">World's Air Pollution: Real-time Air Quality Index </a></b></h3><br>
+		<h3><b><a href="https://www.airnow.gov/aqi/aqi-basics/">Air Quality Index (AQI) Basics</a></b></h3><br>
+
+		<hr>
+		<footer>
+			<h2>Developed by - <b><a href="" class="temp">CHALLENGERS</a></b></h2>
+		</footer>
+	</div>
+	<script src="./script.js" defer></script>
+</body>
+</html>
